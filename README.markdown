@@ -7,5 +7,3 @@ A job board built using Django and [djobberbase](https://github.com/wtrevino/dja
 * Python 2.7+
 * Django 1.3+
 * `markdown`
-
-
