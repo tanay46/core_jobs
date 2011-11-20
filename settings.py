@@ -154,3 +154,4 @@ LOGGING = {
 
 #Djobberbase specific
 DJOBBERBASE_MARKUP_LANGUAGE = 'markdown'
+DJOBBERBASE_HTML_TITLE = 'CORE Jobs'
