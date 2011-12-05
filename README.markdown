@@ -16,11 +16,12 @@ A job board built using Django and [djobberbase](https://github.com/wtrevino/dja
 
 ##TODO
 
-* Backend:
-*   Accounts
-*   Database Structure
-*   Tagging
-* Frontend:
-*   Bootstrap
-*   HTML + CSS
-*   Everything else
+###Backend:
+* Accounts
+* Database Structure
+* Tagging
+
+###Frontend:
+* Bootstrap
+* HTML + CSS
+* Everything else
