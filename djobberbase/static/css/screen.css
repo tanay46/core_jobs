@@ -142,7 +142,7 @@ ul#top
 ul#top li
 {
 	background-color:transparent;
-	color:#00CC33;
+	color:#333333;
 	display:inline;
 	margin-left:2px;
 }
@@ -328,13 +328,13 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner
 #content a
 {
 	background-color:transparent;
-	color:#00CC33;
+	color:#333333;
 	padding:2px;
 }
 
 #content a:hover
 {
-	background-color:#00CC33;
+	background-color:#333333;
 	color:#fff;
 	padding:2px;
 	text-decoration:none;
@@ -358,7 +358,7 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner
 
 div#categs-nav
 {
-	background:#00CC33;
+	background:#333333;
 	float:left;
 	font-size:11px;
 	margin-top:25px;
@@ -466,14 +466,14 @@ div#categs-nav ul li.selected a span.cnr
 
 #sidebar a
 {
-	color:#00CC33;
+	color:#333333;
 	font-size:11px;
 	padding:2px;
 }
 
 #sidebar a:hover
 {
-	background-color:#00CC33;
+	background-color:#333333;
 	color:#fff;
 	padding:2px;
 	text-decoration:none;
@@ -611,7 +611,7 @@ textarea.error
 
 #job-details h2
 {
-	color:#00CC33;
+	color:#333333;
 	font-size:26px;
 	font-weight:normal;
 	line-height:1.2;
@@ -708,7 +708,7 @@ span.la
 	color:#fff;
 }
 
-#publish_form fieldset
+#publish_form2 fieldset
 {
 	background-color:#f5f5f5;
 	border:1px solid #ccc;
@@ -716,15 +716,15 @@ span.la
 	padding:10px;
 }
 
-#publish_form fieldset legend
+#publish_form2 fieldset legend
 {
 	color:#555;
 	font-size:12px;
 	font-weight:bold;
 }
 
-#publish_form input,
-#publish_form textarea,
+#publish_form2 input,
+#publish_form2 textarea,
 #frm-send-to-friend input,
 #frm-send-edit-link input,
 #apply-online input,
@@ -736,9 +736,9 @@ span.la
 	padding:5px;
 }
 
-#publish_form input:focus,
+#publish_form2 input:focus,
 #search input:hover,
-#publish_form textarea:focus,
+#publish_form2 textarea:focus,
 #frm-send-to-friend input:focus,
 #frm-send-to-friend input:hover,
 #frm-send-edit-link input:focus,
@@ -755,25 +755,25 @@ span.la
      vertical-align: middle;
 }
 
-#publish_form input#submit,
+#publish_form2 input#submit,
 #send-to-friend input#submit,
 #frm-send-edit-link input#submit,
 #apply-online input#submit
 {
-	background-color:#00CC33;
+	background-color:#333333;
 	border:1px solid #00691A;
 	color:#fff;
 	cursor:hand;
 }
 
-#publish_form input#submit:hover,
+#publish_form2 input#submit:hover,
 #send-to-friend input#submit:hover,
 #apply-online input#submit:hover
 {
 	background-color:#00A629;
 }
 
-#publish_form label.small
+#publish_form2 label.small
 {
 	color:#555;
 	font-size:12px;
@@ -868,14 +868,14 @@ td.send-to-friend-address-label
 a
 {
 	background-color:transparent;
-	color:#00CC33;
+	color:#333333;
 	text-decoration:none;
 }
 
 a:hover
 {
 	background-color:transparent;
-	color:#00CC33;
+	color:#333333;
 	text-decoration:underline;
 }
 
@@ -903,7 +903,7 @@ h3,
 h3.steps,
 div.steps
 {
-	background:transparent url(../img/header-bg.png) no-repeat left;
+	background:#333 no-repeat left;
 	color:#9AD4FF;
 	font-size:14px;
 	font-weight:normal;
@@ -942,7 +942,7 @@ h3.page-heading a:hover,
 div.page-heading a:hover
 {
 	background-color:#fff !important;
-	color:#00CC33 !important;
+	color:#333333 !important;
 }
 
 h4

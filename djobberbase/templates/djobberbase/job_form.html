@@ -1,7 +1,6 @@
 {% extends "djobberbase/base.html" %}
 
 {% block content %}
-
 <div id="job-listings"></div><!-- #job-listings --> 
 			<div class="steps"> 
 				<div id="step-1" class="step-active"> 
@@ -24,6 +23,7 @@
 					<legend>Job details</legend> 
 					<table border="0" cellspacing="2" cellpadding="2"> 
 						<tr> 
+							<td>Category</td>
 							<td colspan="2"> 
                                 {{ form.jobtype.errors }}
                                  {{ form.jobtype }}
@@ -170,10 +170,10 @@
                         {% endif %}
 					</table> 
 				</fieldset> 
-								<fieldset>{{ form.apply_online }}
-<!-- <input type="checkbox" name="apply_online" id="apply_online" class="no-border" checked="checked" /> -->
-<label for="apply_online"><strong>Allow Online Applications</strong> (If you are unchecking it, then add a description on how to apply online above)</label></fieldset> 
-				<fieldset><input type="submit" name="submit" id="submit" value="Step 2: Verify ad" /></fieldset> 
+							<!-- 	<fieldset>{{ form.apply_online }}
+<input type="checkbox" name="apply_online" id="apply_online" class="no-border" checked="checked" /> 
+<label for="apply_online"><strong>Allow Online Applications</strong> (If you are unchecking it, then add a description on how to apply online above)</label></fieldset> -->
+				<fieldset><input class="btn" type="submit" name="submit" id="submit" value="Step 2: Verify ad" /></fieldset> 
 				<fieldset class="hidden">					
 					<input type="hidden" name="action" value="publish" /> 
 														</fieldset> 
