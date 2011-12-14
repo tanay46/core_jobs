@@ -1,9 +1,13 @@
-# -*- coding: utf-8 -*-
+# Uncomment the next two lines to enable the admin:
+from django.contrib import admin
+admin.autodiscover()
 
 from django.conf.urls.defaults import *
 from djobberbase.models import Job, Category, Type, City
 from djobberbase.conf import settings as djobberbase_settings
 from djobberbase.feeds import LatestJobsFeed
+
+import django.views.static
 
 if djobberbase_settings.DJOBBERBASE_CAPTCHA_POST == 'simple':
     from djobberbase.forms import CaptchaJobForm
@@ -12,8 +16,14 @@ else:
     from djobberbase.forms import JobForm
     form_class = JobForm
 
+admin.autodiscover()
 
 urlpatterns = patterns('django.views.generic',
+	# Uncomment the admin/doc line below to enable admin documentation:
+    # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
+
+    # Uncomment the next line to enable the admin:
+    url(r'^admin/', include(admin.site.urls)),
 
     #An index view
     url(r'^$',
