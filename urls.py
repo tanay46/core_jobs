@@ -6,6 +6,7 @@ from django.conf.urls.defaults import *
 from djobberbase.models import Job, Category, Type, City
 from djobberbase.conf import settings as djobberbase_settings
 from djobberbase.feeds import LatestJobsFeed
+from django.contrib import admin
 
 import django.views.static
 
@@ -16,13 +17,14 @@ else:
     from djobberbase.forms import JobForm
     form_class = JobForm
 
+admin.autodiscover()
 
 urlpatterns = patterns('django.views.generic',
 	# Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-    # url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/', include(admin.site.urls)),
 
     #An index view
     url(r'^$',

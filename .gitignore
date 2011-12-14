@@ -9,3 +9,5 @@ build/
 printenv
 .DS_Store
 *.db
+.idea/
+venv
