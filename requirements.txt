@@ -6,7 +6,7 @@ django-appconf==0.4.1
 django-compressor==1.0.1
 django-debug-toolbar==0.8.5
 django-email-confirmation==0.2
--e git://github.com/jtauber/django-mailer.git@840d25bb9db9fbc801b9226607ddce49f4ac37c5#egg=django-mailer
+django-mailer==0.2a1
 django-notification==0.2
 django-openid==0.3a1
 django-pagination==1.0.7
