@@ -4,4 +4,5 @@ from apps.jobs.views import *
 urlpatterns = patterns('',
     (r'^$', main),
     (r'^post/$', post_job),
+    (r'^tag/$', view_tag),
 )

@@ -2,6 +2,7 @@
 
 {% load i18n %}
 {% load ifsetting_tag %}
+{% load taggit_extras %}
 
 {% block head_title %}Jobs{% endblock %}
 
@@ -11,6 +12,13 @@
             <div class="well">
                 <h1>Jobs</h1>
                 <a href="/jobs/post/" class="btn primary large">Post a Job</a>
+                <div class="tags">
+                    <h3>Tags</h3>
+                    {% get_tagcloud as tags for 'jobs.Post' %}
+                    {% for tag in tags %}
+                        <p style="font-size: {{tag.weight|floatformat:0}}pt">{{tag}}</p>
+                    {% endfor %}
+                </div>
             </div>
         </div>
         <div class="content">

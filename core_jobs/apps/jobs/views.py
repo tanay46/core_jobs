@@ -32,14 +32,29 @@ def post_job(request):
         return HttpResponseRedirect('/jobs/post/')
     else:
         form = PostForm()
-        variables = RequestContext(request,
+        vars = RequestContext(request,
                 {'form': form}
         )
-        return render_to_response('jobs/post_job.html', variables)
+        return render_to_response('jobs/post_job.html', vars)
+
+def view_tag(request):
+    if request.is_ajax():
+        if request.GET.has_key('term'):
+            term = request.GET['term']
+            posts = Post.objects.filter(
+                tags__name__in=[term]
+            )
+            vars = RequestContext(request,
+                {'posts': posts}
+            )
+        else:
+            pass
+    else:
+        return Http404()
 
 def main(request):
     posts = Post.objects.all()
-    variables = RequestContext(request,
+    vars = RequestContext(request,
             {'posts': posts}
     )
-    return render_to_response('jobs/main.html', variables)
+    return render_to_response('jobs/main.html', vars)

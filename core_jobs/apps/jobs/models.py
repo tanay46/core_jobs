@@ -13,4 +13,4 @@ class Post(models.Model):
     tags = TaggableManager()
 
     def __unicode__(self):
-        return ' '.join(self.title, self.created_on)
+        return ' '.join([self.title, str(self.created_on)])
