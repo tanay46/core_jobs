@@ -1,0 +1,15 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+{% load ifsetting_tag %}
+
+{% block head_title %}Job Posting{% endblock %}
+
+{% block body %}
+    <h1>Job Posting</h1>
+    <form id="post-form" method ="post" action=".">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <input type="submit" class="btn primary" value="Submit" />
+    </form>
+{% endblock %}

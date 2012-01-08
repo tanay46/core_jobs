@@ -15,6 +15,7 @@ django-taggit==0.9.3
 django-taggit-templatetags==0.4.6dev
 django-templatetag-sugar==0.1
 django-timezones==0.2
+gunicorn==0.13.4
 idios==0.2a1
 metron==0.1
 pinax-theme-bootstrap==0.1.2

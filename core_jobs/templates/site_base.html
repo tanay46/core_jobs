@@ -4,12 +4,13 @@
 {% load i18n %}
 
 {% block nav %}
-    {% if user.is_authenticated %}
-        <ul>{% spaceless %}
+    <ul>{% spaceless %}
+        <li id="tab_jobs"><a href="/jobs/">Jobs</a></li>
+        {% if user.is_authenticated %}
             <li id="tab_profile"><a href="{% url profile_detail user.username %}">{% trans "Profile" %}</a></li>
             <li id="tab_notices"><a href="{% url notification_notices %}">{% trans "Notices" %}{% if notice_unseen_count %} ({{ notice_unseen_count }}){% endif %}</a></li>
-        {% endspaceless %}</ul>
-    {% endif %}
+        {% endif %}
+    {% endspaceless %}</ul>
 {% endblock %}
 
 {% block footer %}
