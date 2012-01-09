@@ -3,16 +3,7 @@
 {% block head_title %}Jobs{% endblock %}
 
 {% block body %}
-<div class="content">
-    <div id="posts">
-        <ul>
-            <li>
-            {% for post in posts %}
-                <h2>{{ post.title }}</h2>
-                <p>{{ post.description }}</p>
-            {% endfor %}
-            </li>
-        </ul>
-    </div>
+<div id="content">
+    {% include "jobs/posts.html" %}
 </div>
 {% endblock %}
