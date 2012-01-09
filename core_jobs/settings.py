@@ -177,12 +177,12 @@ INSTALLED_APPS = [
     # custom
     "jobs",
 
+    #search
+    "haystack",
+
     # tagging
     "taggit",
     "taggit_templatetags",
-
-    #search
-    "haystack",
 ]
 
 FIXTURE_DIRS = [
