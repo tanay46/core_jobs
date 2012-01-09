@@ -1,15 +1,18 @@
-{% extends "site_base.html" %}
+{% extends "jobs/jobs_base.html" %}
 
-{% load i18n %}
-{% load ifsetting_tag %}
+{% load bootstrap_tags %}
 
 {% block head_title %}Job Posting{% endblock %}
 
 {% block body %}
+<div id="post-job">
     <h1>Job Posting</h1>
     <form id="post-form" method ="post" action=".">
-        {{ form.as_p }}
         {% csrf_token %}
+        <fieldset>
+            {{ form|as_bootstrap }}
+        </fieldset>
         <input type="submit" class="btn primary" value="Submit" />
     </form>
+</div>
 {% endblock %}
