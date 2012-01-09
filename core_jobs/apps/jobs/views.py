@@ -39,18 +39,23 @@ def post_job(request):
 
 def view_tag(request):
     if request.is_ajax():
-        if request.GET.has_key('term'):
-            term = request.GET['term']
-            posts = Post.objects.filter(
-                tags__name__in=[term]
-            )
-            vars = RequestContext(request,
-                {'posts': posts}
-            )
+        if request.GET.has_key('q'):
+            term = request.GET['q']
+            return _render_for_tag(request, tag=term)
         else:
-            pass
+            return _render_for_tag(request)
     else:
-        return Http404()
+        return HttpResponseRedirect('/jobs/')
+
+def _render_for_tag(request, tag=None):
+    if tag is not None:
+        posts = Post.objects.filter(tags__name__in=[tag])
+    else:
+        posts = Post.objects.all()
+    vars = RequestContext(request,
+            {'posts': posts}
+    )
+    return render_to_response('jobs/posts.html', vars)
 
 def main(request):
     posts = Post.objects.all()
