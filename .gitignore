@@ -11,3 +11,4 @@ printenv
 *.db
 .idea/
 venv
+search_index

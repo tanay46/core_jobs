@@ -10,7 +10,7 @@ django-appconf==0.4.1
 django-compressor==1.0.1
 django-debug-toolbar==0.8.5
 django-email-confirmation==0.2
-django-mailer==0.2a1
+django-mailer==0.2a1.dev3
 django-notification==0.2
 django-openid==0.3a1
 django-pagination==1.0.7
@@ -27,3 +27,10 @@ psycopg2==2.4.3
 python-openid==2.2.5
 pytz==2011n
 wsgiref==0.1.2
+
+git+git://github.com/toastdriven/django-haystack.git@#egg=django-haystack-2.0.0-beta
+## The following requirements were added by pip --freeze:
+Whoosh==2.3.2
+argparse==1.2.1
+haystack==0.13
+python-ptrace==0.6.3

@@ -12,6 +12,7 @@
 {% block subnav %}
     <h1>Jobs</h1>
     <a href="/jobs/post/" class="btn primary large">Post a Job</a>
+    <a href="/jobs/search" class="btn info large">Basic Search</a>
     <div class="tags">
         <h3>Tags</h3>
         {% get_tagcloud as tags for 'jobs.Post' %}

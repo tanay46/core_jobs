@@ -14,13 +14,15 @@ def post_job(request):
     if request.method == 'POST':
         form = PostForm(request.POST)
         if form.is_valid():
-            Post.objects.create(
+            new_post = Post.objects.create(
                 title=form.cleaned_data['title'],
                 user=request.user,
                 email=form.cleaned_data['email'],
                 description=form.cleaned_data['description'],
                 expires_on=form.cleaned_data['expires_on']
             )
+            for tag in form.cleaned_data['tags']:
+                new_post.tags.add(tag)
             messages.add_message(request, messages.SUCCESS,
                 u"Successfully posted."
             )

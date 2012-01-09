@@ -1,4 +1,4 @@
-from django.conf.urls.defaults import patterns, include, url
+from django.conf.urls.defaults import patterns, include
 from apps.jobs.views import *
 
 urlpatterns = patterns('',
@@ -6,4 +6,6 @@ urlpatterns = patterns('',
     (r'^post/$', post_job),
 
     (r'^tag/$', view_tag),
+
+    (r'^search/', include('haystack.urls')),
 )

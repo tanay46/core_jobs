@@ -8,7 +8,6 @@ $(function(){
                 $(".posts:first").animate({ height: 'toggle', opacity: 'toggle' }, "slow", function(){
                     $(".posts:first").remove();
                 });
-            }
-        );
+        });
     });
 });

@@ -14,3 +14,6 @@ class Post(models.Model):
 
     def __unicode__(self):
         return ' '.join([self.title, str(self.created_on)])
+
+    def tags_to_str(self):
+        return ' '.join(map(lambda x: x.__str__(), self.tags.all()))

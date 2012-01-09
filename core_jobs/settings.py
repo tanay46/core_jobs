@@ -179,7 +179,10 @@ INSTALLED_APPS = [
 
     # tagging
     "taggit",
-    "taggit_templatetags"
+    "taggit_templatetags",
+
+    #search
+    "haystack",
 ]
 
 FIXTURE_DIRS = [
@@ -229,3 +232,15 @@ except ImportError:
 # taggit tagclouds
 TAGGIT_TAGCLOUD_MIN = 12.0
 TAGGIT_TAGCLOUD_MAX = 40.0
+
+# Haystack - Search
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
+        'PATH': os.path.join(PROJECT_ROOT,'search_index'),
+        'STORAGE': 'file',
+        'POST_LIMIT': 128 * 1024 * 1024,
+        'INCLUDE_SPELLING': False,
+        'BATCH_SIZE': 100,
+        },
+}
