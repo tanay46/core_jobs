@@ -10,6 +10,7 @@
 {% block body_class %}jobs{% endblock %}
 
 {% block subnav %}
+<div id="subnav-well" class="well">
     <h1>Jobs</h1>
     <a href="/jobs/post/" class="btn primary large">Post a Job</a>
     <a href="/jobs/search" class="btn info large">Basic Search</a>
@@ -20,4 +21,5 @@
             <a class="{{ tag }}" href="#" style="font-size: {{tag.weight|floatformat:0}}pt">{{tag}}</a>
         {% endfor %}
     </div>
+</div>
 {% endblock %}
