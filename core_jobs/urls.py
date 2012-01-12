@@ -7,9 +7,9 @@ admin.autodiscover()
 
 from pinax.apps.account.openid_consumer import PinaxConsumer
 
-
 handler500 = "pinax.views.server_error"
 
+from apps.jobs.views import main
 
 urlpatterns = patterns("",
     url(r"^$", direct_to_template, {

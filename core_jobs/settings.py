@@ -177,12 +177,14 @@ INSTALLED_APPS = [
     # custom
     "jobs",
 
-    #search
+    # search
     "haystack",
 
     # tagging
     "taggit",
     "taggit_templatetags",
+
+    'tastypie',
 ]
 
 FIXTURE_DIRS = [
