@@ -5,17 +5,21 @@ $(function() {
     });
 
     //Tagcloud functionality
-    $("div.tags a").click(function() {
-        $.get('/jobs/tag/', {
-            q: $(this).text()
-        }, function(data) {
-            $(".posts:first").after(data).animate({
-                height: 'toggle',
-                opacity: 'toggle'
-            }, "slow", function() {
-                $(".posts:first").remove();
+    $("div.tags a").click(function(event) {
+        var $tagButton = $(this);
+        if (!$tagButton.attr("disabled")) {
+            $tagButton.attr("disabled", true);
+            $.get('/jobs/tag/', {
+                q: $(this).text()
+            }, function(data) {
+                $(".posts:first").after(data).animate({
+                    height: 'toggle',
+                    opacity: 'toggle'
+                }, "slow", function() {
+                    $(".posts:first").remove();
+                    $tagButton.attr("disabled", false);
+                });
             });
-        });
-        return false;
-    });
+            return false;
+        }});
 });
